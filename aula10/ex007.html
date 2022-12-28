@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        form {
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            font-family: 'Times New Roman', Times, serif
+        }
+
+        label {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Notas</h1>
+    <form onchange="Somar()">
+        <label for="nota1">Nota 1</label>
+        <input type="number" id="nota1" value="0" min="0" max="10" step="1" required>
+        <label for="nota2">Nota 2</label>
+        <input type="number" id="nota2" value="0" min="0" max="10" step="1" required>
+        <label for="resultado">Resultado</label>
+        <input type="text" value="0" id="resultado" readonly>
+    </form>
+
+    <script>
+        function Somar(){
+            nota1 = Number(window.document.getElementById('nota1').value);
+            nota2 = Number(window.document.getElementById('nota2').value);
+    
+            resultado = window.document.getElementById('resultado');
+            resultado.value = nota1 + nota2;
+        }
+    </script>
+</body>
+</html>
